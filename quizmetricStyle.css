@@ -36,16 +36,15 @@
     margin:2px;
     width: 20%;
     overflow: hidden;
-    box-shadow: 0 0 5px 2px black;
+    box-shadow: 5px 5px 2px 1px rgb(63, 42, 42);
     position: auto;
-    
 }
 
  /*quiz box*/
  .quizBox{
     background-color: #f1f1f1;
     border-radius: 10px;
-    box-shadow: 0 0 5px 2px black;
+    box-shadow: 5px 10px 2px black;
     width: 70%;
     overflow: hidden;
 }
