@@ -141,6 +141,7 @@ function getSelected() {
 }
  
 /*scoreing code*/
+const scoreScore = document.getElementById("score-score");
 
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
