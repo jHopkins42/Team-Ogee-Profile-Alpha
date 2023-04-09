@@ -23,7 +23,7 @@
     font-family: 'EB Garamond', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 125vh;
     overflow: hidden;
     margin: 2px;
@@ -38,6 +38,7 @@
     overflow: hidden;
     box-shadow: 0 0 5px 2px black;
     position: auto;
+    
 }
 
  /*quiz box*/
