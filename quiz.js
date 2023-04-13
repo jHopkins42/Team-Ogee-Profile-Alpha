@@ -1,4 +1,13 @@
 const quizData = [
+ /*   {
+        question: "Are you ready to begin?",
+        a: "5",
+        b: "4",
+        c: "3",
+        d: "2",
+        e: "1",
+        correct: " ",
+    },*/
     {
         question: "What does 'HTML' stand for?",
         a: "Head Text Major League",
@@ -143,7 +152,9 @@ function getSelected() {
 /*scoreing code*/
 const scoreScore = document.getElementById("score-score");
 
-submitBtn.addEventListener('click', () => {
+Element.addEventListener("click", next);
+function next() {
+    submitBtn
     const answer = getSelected()
     if(answer){
         if(answer === quizData[currentQuiz].correct) {
@@ -157,4 +168,4 @@ submitBtn.addEventListener('click', () => {
         }
     }
     
-})
+}
