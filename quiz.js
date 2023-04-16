@@ -141,7 +141,7 @@ function deselectAnswers() {
         
 function getSelected() {
     let answerEls
-    answerels.forEach(answerEl=> {
+    answerEls.forEach(answerEl=> {
         if(answerEl.checked) {
             answer = answerEl.id
         }
@@ -149,12 +149,33 @@ function getSelected() {
     return answer
 }
  
+/*timer code*/
+// var quizTimer = setInterval(function() {
+
+// }, 1000)
+var questionTimer=5;
+var elem = document.getElementById('timer');
+
+var timerId = setInterval(countdown, 8000);
+
+function countdown() {
+    if (timeLeft == 0) {
+        clearTimeout(timerId);
+        doSomething();
+    } else {
+        const timeArray1 = timerId.slice(0,1);
+        const timeArray2 = timerId.slice(1,2);
+        const timeArray3 = timerId.slice(2,3);
+        const timeArray4 = timerId.slice(3);
+        elem.innerHTML= timeLeft[timeArray1 + ' ' + timeArray2 + ' ' + timeArray3 + ' ' + timeArray4];
+    }
+}
 /*scoreing code*/
 const scoreScore = document.getElementById("score-score");
 
-Element.addEventListener("click", next);
+document.getElementById("submit").addEventListener("click", next);
 function next() {
-    submitBtn
+    submitBtn;
     const answer = getSelected()
     if(answer){
         if(answer === quizData[currentQuiz].correct) {
@@ -164,7 +185,11 @@ function next() {
         if(currentQuiz < quizData.length) {
             loadQuiz()
         } else {
-            quiz.innerHTML
+            score_score.innerHTML = `
+            <h3>You have ${score}/${quizData.length} correct.</h3>
+
+            <button onclick="location.reload()">Reload</button>
+            `
         }
     }
     
