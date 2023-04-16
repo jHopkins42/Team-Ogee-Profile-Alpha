@@ -158,18 +158,28 @@ var elem = document.getElementById('timer');
 
 var timerId = setInterval(countdown, 8000);
 
-function countdown() {
-    if (timeLeft == 0) {
-        clearTimeout(timerId);
-        doSomething();
-    } else {
-        const timeArray1 = timerId.slice(0,1);
-        const timeArray2 = timerId.slice(1,2);
-        const timeArray3 = timerId.slice(2,3);
-        const timeArray4 = timerId.slice(3);
-        elem.innerHTML= timeLeft[timeArray1 + ' ' + timeArray2 + ' ' + timeArray3 + ' ' + timeArray4];
-    }
+function countdown(duration, display) {
+    var quizRepeatTimer = duration, seconds;
+    setInterval(function() {
+        seconds = 6;
+        display.textContent = seconds;
+        if (--quizRepeatTimer <0){
+            quizRepeatTimer=duration;
+        }
+    }, 1000);
 }
+
+//     if (timeLeft == 0) {
+//         clearTimeout(timerId);
+//         doSomething();
+//     } else {
+//         const timeArray1 = timerId.slice(0,1);
+//         const timeArray2 = timerId.slice(1,2);
+//         const timeArray3 = timerId.slice(2,3);
+//         const timeArray4 = timerId.slice(3);
+//         elem.innerHTML= timeLeft[timeArray1 + ' ' + timeArray2 + ' ' + timeArray3 + ' ' + timeArray4];
+//     }
+// }
 /*scoreing code*/
 const scoreScore = document.getElementById("score-score");
 
